@@ -8,10 +8,11 @@ import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src/test/resources/features",
+@CucumberOptions(features="src/test/resources/features/",
                   glue="stepsDefinitions",
-                  tags = {""},
+                  tags = {"@Admin"},
                   snippets = SnippetType.CAMELCASE,
+                  monochrome = true,
                   dryRun=false)
 public class RunnerTest {
 
