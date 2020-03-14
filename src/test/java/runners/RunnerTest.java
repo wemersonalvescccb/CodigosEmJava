@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 @CucumberOptions(plugin = {"html:target/cucumber-report"},
 		features="src/test/resources/features/",
                   glue="stepsDefinitions",
-                  tags = {""},
+                  tags = {"@CadastrarUruario"},
                   snippets = SnippetType.CAMELCASE,
                   monochrome = true,
                   dryRun=false)

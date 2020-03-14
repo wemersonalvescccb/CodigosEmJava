@@ -49,6 +49,9 @@ public class AdminPage {
 	
 	@FindBy(name ="searchSystemUser[userType]")
 	public WebElement selectUserRole;
+	
+	@FindBy(id ="btnAdd")
+	public WebElement botaoAdd;
 
 	// Metodos
 	public void acessarMenuAdmin() throws Exception {
@@ -92,6 +95,10 @@ public class AdminPage {
 	public void validarTelaSystemUser() {
 		espera.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h1[.='System Users']")));
 		assertTrue(telaSystemUser.isDisplayed());
+	}
+	
+	public void clicarBotaoAdd() {
+		botaoAdd.click();
 	}
 	
 

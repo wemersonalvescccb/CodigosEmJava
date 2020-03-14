@@ -49,4 +49,9 @@ public class AdminSteps {
 	public void oSistemaApresentaATelaDeSystemUser() throws Throwable {
 		adminPage.validarTelaSystemUser();
 	}
+
+	@E("^clicar no botao add$")
+	public void clicarNoBotaoAdd() throws Throwable {
+		adminPage.clicarBotaoAdd();
+	}
 }
