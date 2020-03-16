@@ -4,9 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import io.cucumber.java.Scenario;
@@ -20,8 +18,7 @@ public class Utils {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-//		driver.get("http://demoqa.com/droppable/");
-		driver.get("https://opensource-demo.orangehrmlive.com/");
+		driver.get("http://automationpractice.com/index.php");
 	}
 
 	public static <T> T Na(Class<T> classe) {
@@ -34,10 +31,5 @@ public class Utils {
 		scenario.embed(screenshot, "image/png");
 	}
 	
-	public static void moverMouse(WebElement elemento1, WebElement elemento2) {
-		Actions acao = new Actions(driver);
-		acao.moveToElement(elemento1).build().perform();
-		acao.moveToElement(elemento2).build().perform();
-	}
 
 }

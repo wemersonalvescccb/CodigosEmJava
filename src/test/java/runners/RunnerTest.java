@@ -11,10 +11,10 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 @CucumberOptions(plugin = {"html:target/cucumber-report"},
 		features="src/test/resources/features/",
                   glue="stepsDefinitions",
-                  tags = {"@CadastrarUruario"},
+                  tags = {""},
                   snippets = SnippetType.CAMELCASE,
                   monochrome = true,
-                  dryRun=false)
+                  dryRun = false)
 public class RunnerTest {
 
 }
